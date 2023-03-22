@@ -1,4 +1,10 @@
+import Profile from "./Profile/Profile";
+import userObj from '../data/user.json'
+import PropTypes from 'prop-types'
+
+
 export const App = () => {
+
   return (
     <div
       style={{
@@ -7,10 +13,12 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+        backgroundColor: '#42798d39'
       }}
     >
-      React homework template
+      <Profile user={userObj} />
+      {/* <Statistics></Statistics> */}
     </div>
   );
 };
