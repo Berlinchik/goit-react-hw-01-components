@@ -24,8 +24,9 @@
     align-items: center;
     gap: 10px;
 }
-.label{
+.statistics-label{
     color: white;
+    font-size: 18px;
 }
 .percentage{
     font-size: 24px;

@@ -6,7 +6,7 @@ const Statistics = ({ title, stats, colors }) => {
         {title && <h2 className="title">{title}</h2>}
         <ul className="stat-list">
            {stats.map((stat, index) => <li className="item" key = {stat.id} style ={{backgroundColor: colors[index]}}  >
-      <span className="label">{stat.label}</span>
+      <span className="statistics-label">{stat.label}</span>
       <span className="percentage">{stat.percentage}%</span>
     </li>)}
   </ul>

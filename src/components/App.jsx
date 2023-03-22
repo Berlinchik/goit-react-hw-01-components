@@ -1,15 +1,16 @@
-import PropTypes from 'prop-types'
 import Profile from "./Profile/Profile";
 import Statistics from "./Statistics/Statistics"
+import FriendList from './FriendList/FriendList'
 import userObj from '../data/user.json'
 import data from '../data/data.json'
+import friends from '../data/friends.json'
 
 export const App = () => {
 
   return (
     <div
       style={{
-        height: '100vh',
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         gap: '50px',
@@ -17,11 +18,13 @@ export const App = () => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
-        backgroundColor: '#42798d39'
+        backgroundColor: '#42798d39',
+        padding: "30px 0"
       }}
     >
       <Profile user={userObj} />
       <Statistics title="Upload stats" stats={data} colors={colors} />
+      <FriendList friends = {friends} />
     </div>
   );
 };
