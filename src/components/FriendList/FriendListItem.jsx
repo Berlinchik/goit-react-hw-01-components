@@ -1,11 +1,18 @@
-import './FriendListItem.css'
+import PropTypes from 'prop-types';
+import css from './FriendListItem.module.scss'
+import { clsx } from 'clsx';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
-    console.log(name);
-    return <li className="friends-item">
-        <span className="status">{isOnline}</span>
-  <img className="friends-avatar" src={avatar} alt="User avatar" />
-        <p className='name'>{name}</p>
+    return <li className={css.item}>
+        <span className={clsx(css.status, isOnline && css.isOnline)}></span>
+  <img className={ css.avatar} src={avatar} alt="User avatar" />
+        <p className={css.name}>{name}</p>
 </li>
 }
 export default FriendListItem;
+
+FriendListItem.propTypes = {
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+}
